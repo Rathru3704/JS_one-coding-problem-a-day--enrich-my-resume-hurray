@@ -9,5 +9,9 @@ var twoSum = function(nums, target) {
 };
 
 twoSum([2, 7, 11, 15], 9);
-
 // [0, 1]
+/*
+29 / 29 test cases passed.
+Runtime: 92 ms
+Memory Usage: 34.7 MB
+*/
