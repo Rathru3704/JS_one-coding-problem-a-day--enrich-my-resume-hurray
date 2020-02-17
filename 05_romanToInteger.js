@@ -16,7 +16,7 @@ var romanToInt = function(s) {
     }
     
     for(let i = 0; i < s.length; i++){
-        if(roman[s.charAt(i)] < roman[s.charAt(i+1)]){
+        if(roman[s.charAt(i)] < roman[s.charAt(i+1)]){  // Noice!
             sum -= roman[s.charAt(i)];
         }
         else{

@@ -4,7 +4,7 @@ var longestCommonPrefix = function(strs) {
     }
     
     for(let i = 0; i < strs[0].length; i++){
-        for(let str of strs){
+        for(let str of strs){                 // Noice!
             if(str[i] !== strs[0][i]){
                 return str.slice(0, i);
             }
