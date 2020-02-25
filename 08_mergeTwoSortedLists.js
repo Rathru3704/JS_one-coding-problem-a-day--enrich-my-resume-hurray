@@ -59,3 +59,34 @@ console.log(arr);
 Runtime: 68 ms
 Memory Usage: 35.6 MB
 */
+
+
+//--------------------------------------------------------------- Array to linked list 
+function linkedList(arr){
+  return arr.reduceRight((next, value) => ({value, next}), null);
+}
+
+l = [1, 1, 2, 3, 4, 4];
+
+console.log(linkedList(l));
+/*
+{
+  "value": 1,
+  "next": {
+    "value": 1,
+    "next": {
+      "value": 2,
+      "next": {
+        "value": 3,
+        "next": {
+          "value": 4,
+          "next": {
+            "value": 4,
+            "next": null
+          }
+        }
+      }
+    }
+  }
+}
+*/
