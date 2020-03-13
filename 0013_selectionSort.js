@@ -1,7 +1,7 @@
-const selectionSort = (arr) => {
+const selectionSort = (arr) => {  // find the minimum and move to leftmost position
     for(let i = 0; i < arr.length; i++){
         let min = arr[i];
-        for(let j = i; j < arr.length; j++){
+        for(let j = i; j < arr.length; j++){  // for each of the unsorted elements
             if(arr[j] < min){
                 min = arr[j];
                 [arr[j], arr[i]] = [arr[i], arr[j]];  // swap minimum with first unsorted position
