@@ -1,5 +1,27 @@
+const removeDuplicatesFromUnsortedArray0 = (arr) => {
+    const includeMethod = (array, dupe) => {
+        for (let j = 0; j < array.length; j++) {
+            if (array[j] === dupe) return true;
+        }
+        return false;
+    }
+        
+    let uniArr = [];
+    for(let i = 0; i < arr.length; i++){
+        if(!includeMethod(uniArr, arr[i])){
+            uniArr.push(arr[i]);
+        }
+    }
+    return uniArr;
+}
+
+console.log(removeDuplicatesFromUnsortedArray0([1, 3, 2, 2, 3, 2, 6, 5, 5]));  // [ 1, 3, 2, 6, 5 ]
+
+
+
+
 // Using includes() to check if uniArr contains the element from arr or not
-const removeDuplicatesFromUnsortedArray = (arr) => {
+const removeDuplicatesFromUnsortedArray1 = (arr) => {
     let uniArr = [];
     uniArr.push(arr[0]);
     for(let i = 1; i < arr.length; i++){
@@ -10,7 +32,9 @@ const removeDuplicatesFromUnsortedArray = (arr) => {
     return uniArr;
 }
 
-console.log(removeDuplicatesFromUnsortedArray([1, 3, 2, 2, 3, 2, 6, 5, 5]));  // [ 1, 3, 2, 6, 5 ]
+console.log(removeDuplicatesFromUnsortedArray1([1, 3, 2, 2, 3, 2, 6, 5, 5]));  // [ 1, 3, 2, 6, 5 ]
+
+
 
 
 // I also remembered there is a solution without creating a new array
