@@ -12,6 +12,13 @@ const removeDuplicatesFromUnsortedArray0 = (arr) => {
             uniArr.push(arr[i]);
         }
     }
+    // Using map() is also a good way
+    // arr.map(cur => {
+    //     if(!includeFun(uniArr, cur)){
+    //         uniArr.push(cur);
+    //     }
+    // })
+
     return uniArr;
 }
 
