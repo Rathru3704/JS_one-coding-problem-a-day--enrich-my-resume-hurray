@@ -39,7 +39,6 @@ const bubbleSort3 = (arr) => {
     let swap = false;                     // Noice!
     for(let i = arr.length; i > 0; i--){  // Noice!
         for(let j = 0; j < i - 1; j++){
-            console.log(arr, arr[j], arr[j+1]);
             if(arr[j] > arr[j+1]){
                 [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
                 swap = true;
@@ -50,4 +49,4 @@ const bubbleSort3 = (arr) => {
     return arr;
 }
 
-console.log(bubbleSort3([3,44,38,5,47,15,36,26,27,47,2,46,4,19,50,48]));
+console.log(bubbleSort3([0,2,34,22,10,19,17]));  // [ 0, 2, 10, 17, 19, 22, 34 ]
