@@ -60,7 +60,7 @@ class SinglyLinkedList{
         // Decrement the length of the list by 1
         this.length--;
 
-        // ***** If the list is empty...
+        // ***** If the list becomes empty...
         if(this.length === 0){
             this.head = null;
             this.tail = null;
