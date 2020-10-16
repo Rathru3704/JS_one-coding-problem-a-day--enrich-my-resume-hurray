@@ -25,7 +25,6 @@ console.log(countUniqueValues1([]));
 console.log(countUniqueValues1([-2,-1,-1,0,1]));
 
 
-
 // A nifty way; Multiple Pointers
 const countUniqueValues2 = (arr) => {
     let i = 0;
@@ -45,3 +44,18 @@ console.log(countUniqueValues2([1,1,1,2]));
 console.log(countUniqueValues2([1,2,3,4,4,4,7,12]));
 console.log(countUniqueValues2([]));
 console.log(countUniqueValues2([-2,-1,-1,0,1]));
+
+
+// Using Set()
+const countUniqueValues3 = (arr) => {
+    let set = new Set();
+    for(ele of arr){
+        set.add(ele);
+    }
+    return [...set].length;
+}
+
+console.log(countUniqueValues3([1,1,1,2]));
+console.log(countUniqueValues3([1,2,3,4,4,4,7,12]));
+console.log(countUniqueValues3([]));
+console.log(countUniqueValues3([-2,-1,-1,0,1]));
