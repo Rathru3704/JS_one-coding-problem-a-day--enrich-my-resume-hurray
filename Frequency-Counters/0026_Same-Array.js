@@ -33,7 +33,7 @@ const sameArr2 = (aArr, bArr) => {
     for(key in aObj){
         // Make sure that every key matches bewteen two arrays
         if(!(key in bObj)) return false;  // The in operator returns true if the specified property is in the specified object or its prototype chain.
-
+                                          // What's the difference between in & hasOwnProperty()? The key difference is that in will return true for inherited properties, whereas hasOwnProperty() will return false for inherited properties.
         // Make sure that every count of keys matches bewteen two arrays
         if(aObj[key] !== bObj[key]) return false;
     }
