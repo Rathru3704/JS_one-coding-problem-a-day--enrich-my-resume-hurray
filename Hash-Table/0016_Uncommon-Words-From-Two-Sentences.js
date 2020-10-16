@@ -35,3 +35,38 @@ console.log(uncommonFromSentences("apple is apple", "banana"));
 Runtime: 72 ms
 Memory Usage: 33.9 MB
 */
+
+
+var uncommonFromSentences2 = function(A, B) {
+    let aArr = A.split(' ').sort();
+    let bArr = B.split(' ').sort();
+    let aObj = {};
+    let bObj = {};
+    let uncommon = [];
+
+    for(ele of aArr){
+        aObj[ele] = (aObj[ele] || 0) + 1;
+    }
+
+    for(ele of bArr){
+        bObj[ele] = (bObj[ele] || 0) + 1;
+    }
+
+    for(key in aObj){
+        if(!bObj[key] && aObj[key] === 1){
+            uncommon.push(key);
+        }
+    }
+
+    for(key in bObj){
+        if(!aObj[key] && bObj[key] === 1){
+            uncommon.push(key);
+        }
+    }
+
+    return uncommon;
+};
+
+console.log(uncommonFromSentences2("this apple is sweet apple", "this apple is sour"));
+console.log(uncommonFromSentences2("apple apple", "banana"));
+console.log(uncommonFromSentences2("apple is apple", "banana"));
