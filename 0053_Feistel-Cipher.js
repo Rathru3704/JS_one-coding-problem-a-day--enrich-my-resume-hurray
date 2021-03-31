@@ -29,25 +29,6 @@ const feistelCipher = (str, strK) => {
     for(let i = 0; i < str.length / 2; i++){
         arrL.push(str[i]);
     }
-    console.log(arrL.join(''));
-
-    for(let i = str.length / 2; i < str.length; i++){
-        arrR.push(str[i]);
-    }
-    
-    let RtoF = funcAND(strK, arrR.join('')).toString();
-    let LtoXOR = funcXOR(RtoF, arrL.join('')).toString();
-
-    return [LtoXOR, arrR.join('')].join('');
-}
-
-const feistelCipherDecryption = (str, strK) => {
-    arrL = [], arrR = [];
-
-    for(let i = 0; i < str.length / 2; i++){
-        arrL.push(str[i]);
-    }
-    console.log(arrL.join(''));
 
     for(let i = str.length / 2; i < str.length; i++){
         arrR.push(str[i]);
